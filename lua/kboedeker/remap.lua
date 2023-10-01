@@ -6,7 +6,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- vim.opt.guicursor = ""
 -- line numbering
 vim.opt.nu = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -27,12 +27,18 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 4
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
 vim.opt.autoread = true
+
+-- the following case options must be used together for smartcase to work
+-- All your searches will be case insensitive
+vim.opt.ignorecase = true 
+-- Your search will be case sensitive if it contains an uppercase letter
+vim.opt.smartcase = true 
 
 -- vim.opt.colorcolumn = "80"
